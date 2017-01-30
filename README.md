@@ -1,4 +1,4 @@
-# loadbalacing
+# load balacing
 
 https://www.youtube.com/watch?v=yNuuoQLw0tA#t=798.460003
 
