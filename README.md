@@ -16,6 +16,7 @@ https://www.youtube.com/watch?v=V2L7_xAGhqM&feature=youtu.be
 
 https://www.youtube.com/watch?v=Njx1V4ZW_g0
 
+```code
 ...
 apply plugin: 'war'
 
@@ -34,4 +35,6 @@ dependencies {
     providedRuntime("org.springframework.boot:spring-boot-starter-tomcat") //this is main point for library
     ...
 }
+```
 
+https://www.mulesoft.com/tcat/apache-tomcat-mod-jk-connector-configuration
