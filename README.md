@@ -37,13 +37,13 @@ dependencies {
 }
 ```
 
-```code
 https://www.mulesoft.com/tcat/apache-tomcat-mod-jk-connector-configuration
 
 #configure in server.xml
 
 ##turn on module in apache24
 
+```code
 LoadModule access_compat_module modules/mod_access_compat.so
 
 LoadModule actions_module modules/mod_actions.so
@@ -96,7 +96,7 @@ LoadModule autoindex_module modules/mod_autoindex.so
 
 #LoadModule cache_module modules/mod_cache.so
 
-#LoadModule cache_disk_module modules/mod_cache_disk.so
+#LoadModule cache_disk_module modules/mod_cache_disk.so```
 
 #LoadModule cache_socache_module modules/mod_cache_socache.so
 
@@ -260,9 +260,10 @@ LoadModule status_module modules/mod_status.so
 
 #LoadModule xml2enc_module modules/mod_xml2enc.so
 
-
+```
 ##mod jk configuration version 1
 
+```code
 LoadModule jk_module modules/mod_jk.so
 
 JkWorkersFile conf/workers.properties
