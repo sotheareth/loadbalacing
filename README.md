@@ -289,4 +289,43 @@ JkMount 		/HelloWorld/* lb
 
 http://www.howtogeek.com/howto/windows/adding-a-tcpip-route-to-the-windows-routing-table/
 
+```code
+worker.list=lb
 
+worker.worker1.port=9032
+worker.worker1.host=localhost
+worker.worker1.type=ajp13
+#worker.worker1.lbfactor=2
+
+worker.worker2.port=9042
+worker.worker2.host=localhost
+worker.worker2.type=ajp13
+#worker.worker2.lbfactor=1
+
+worker.worker3.port=9052
+worker.worker3.host=localhost
+worker.worker3.type=ajp13
+
+worker.lb.type=lb
+worker.lb.balance_workers=worker1,worker2,worker3
+
+worker.list=jkstatus
+worker.jkstatus.type=status
+```
+
+
+```code
+#mod jk configuration version 1
+LoadModule jk_module modules/mod_jk.so
+JkWorkersFile conf/workers.properties
+JkLogLevel 		error
+JkLogFile 		logs/mod_jk.log
+JkMount 		/HelloWorld/* lb
+
+<Location /jkmanager/>
+	JkMount jkstatus
+	Order deny,allow
+	Deny from all
+	Allow from 127.0.0.1
+</Location>
+```
