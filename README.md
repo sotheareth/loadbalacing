@@ -16,6 +16,14 @@ https://www.youtube.com/watch?v=V2L7_xAGhqM&feature=youtu.be
 
 https://www.youtube.com/watch?v=Njx1V4ZW_g0
 
+https://nginx.org/en/#architecture_and_scalability
+
+https://www.nginx.com/blog/nginx-vs-apache-our-view/
+
+https://examples.javacodegeeks.com/enterprise-java/tomcat/tomcat-clustering-session-replication-tutorial/
+
+
+
 ```code
 ...
 apply plugin: 'war'
